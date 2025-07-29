@@ -1,4 +1,13 @@
-
+/*@import 'tailwindcss/base';*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.slide-right {
+    @apply translate-x-72 scale-90 rounded-l-2xl;
+}
+
+.slide-left {
+    @apply translate-x-0 scale-100 rounded-none;
+}
