@@ -2,8 +2,8 @@
 import Navbar from '../Components/Navbar';
 import Bottomenu from '../Components/Bottomenu';
 import Homeapps from '../Components/Homeapps'; // Import Homeapps component directly for simplicity
-import '../index.css'; // Assuming you have a global CSS file for styles'
 import SideBar from './Sidebar';
+import '../index.css'; // Assuming you have a global CSS file for styles'
 
 export default function Card() {
 
@@ -46,10 +46,10 @@ export default function Card() {
 
     return (
         <>
-            <SideBar />
+            <SideBar show={slideRight} />
 
             {/*Whole Container*/}
-            <div className={`relative w-full overflow-hidden ${slideRight ? 'slide-right' : 'slide-left'} transition-all duration-300 ease-in-out`} id="main-container">
+            <div className={`relative h-screen w-full overflow-hidden ${slideRight ? 'slide-right' : 'slide-left'} transition-all duration-300 ease-in-out`} id="main-container">
 
                 {/*Navbar*/}
                 <Navbar onLeftClick={HandleSlideRight} />
@@ -57,7 +57,8 @@ export default function Card() {
 
 
                 {/*Homeapps*/}
-                <div className="pb-16 pt-16"> {/* Padding to prevent overlap */}
+                <div className="py-16 h-full overflow-y-auto"> {/* Padding to prevent overlap */}
+                    <Homeapps />
                     <Homeapps />
                 </div>
                 {/*Home*/}
