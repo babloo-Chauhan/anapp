@@ -4,7 +4,9 @@ function App() {
   
   return (
       <>
-        <Card/>
+          <div className='h-screen w-full overflow-hidden'>
+              <Card />
+          </div>
     </>
   )
 }

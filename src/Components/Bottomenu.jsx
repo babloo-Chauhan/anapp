@@ -1,14 +1,14 @@
-import React from 'react';
+﻿import React from 'react';
 
 export default function Bottomenu() {
     return (
         <>
-            <div className='h-16 w-full bg-amber-900 flex justify-between items-center px-2 fixed bottom-0 left-0'>
-                <div className='h-[50px] w-[50px] bg-white rounded-full'></div>
-                <div className='h-[50px] w-[50px] bg-white rounded-full'></div>
-                <div className='h-[50px] w-[50px] bg-white rounded-full'></div>
-                <div className='h-[50px] w-[50px] bg-white rounded-full'></div>
-                <div className='h-[50px] w-[50px] bg-white rounded-full'></div>
+            <div className='fixed bottom-0 left-0 flex h-16 w-full items-center justify-between bg-amber-900 px-2'>
+                <div className='h-[50px] w-[50px] rounded-full bg-white'></div>
+                <div className='h-[50px] w-[50px] rounded-full bg-white'></div>
+                <div className='h-[50px] w-[50px] rounded-full bg-white'></div>
+                <div className='h-[50px] w-[50px] rounded-full bg-white'></div>
+                <div className='h-[50px] w-[50px] rounded-full bg-white'></div>
             </div>
         </>
     )

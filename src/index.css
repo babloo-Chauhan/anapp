@@ -5,7 +5,7 @@
 
 
 .slide-right {
-    @apply translate-x-72 scale-90 rounded-l-2xl;
+    @apply translate-x-72 scale-90 rounded-2xl;
 }
 
 .slide-left {
