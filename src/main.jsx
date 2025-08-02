@@ -2,6 +2,7 @@ import { StrictMode, Profiler } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import { BrowserRouter } from 'react-router-dom';
 
 function onRender(
   id, // the "id" prop of the Profiler tree that has just committed
@@ -17,8 +18,11 @@ function onRender(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <BrowserRouter>
+      
     <Profiler id="App" onRender={onRender}>
       <App />
     </Profiler>
+    </BrowserRouter>
   </StrictMode>
 )

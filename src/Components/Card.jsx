@@ -1,9 +1,9 @@
 ﻿import React, { useEffect, useState } from 'react';
 import Navbar from '../Components/Navbar';
 import Bottomenu from '../Components/Bottomenu';
-import Homeapps from '../Components/Homeapps'; // Import Homeapps component directly for simplicity
 import SideBar from './Sidebar';
 import '../index.css'; // Assuming you have a global CSS file for styles'
+import BrowserRouters from '../BrowserRouters';
 
 export default function Card() {
 
@@ -56,12 +56,11 @@ export default function Card() {
                 {/*Navbar*/}
 
 
-                {/*Homeapps*/}
+                {/*all pages router*/}
                 <div className="py-16 h-full overflow-y-auto"> {/* Padding to prevent overlap */}
-                    <Homeapps />
-                    <Homeapps />
+                    <BrowserRouters />
                 </div>
-                {/*Home*/}
+                {/*all pages router*/}
 
 
                 {/*Bottom menu Bar*/}
