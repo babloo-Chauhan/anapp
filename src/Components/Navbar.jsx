@@ -23,9 +23,10 @@ const Navbar = React.memo(function Navbar({  toggleLayout , i }) {
                 onClick={toggleLayout}
             >
                 {i ? (
-                    <FaXmark className='text-3xl transition-transform duration-300 transform rotate-180' />
-                ) : (
                     <TiThMenu className='text-4xl transition-transform duration-300 transform rotate-0' />
+                ) : (
+                   
+                <FaXmark className='text-3xl transition-transform duration-300 transform rotate-180' />
                 )}
             </div>
 

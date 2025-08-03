@@ -59,6 +59,57 @@ const HomePage = () => {
                           <img src={d} className="h-48 w-full object-cover rounded-t-lg" />
                           <p className="text-center text-xl text-black py-2">PLANT D</p>
                       </div>
+                  <div className="rounded-lg border-dashed border border-black hover:scale-105 transition-all duration-200 ease hover:shadow-2xl">
+                      <img src={a} className="h-48 w-full object-cover rounded-t-lg" />
+                      <p className="text-center text-xl text-black py-2">PLANT A</p>
+                  </div>
+
+                  <div className="rounded-lg border-dashed border border-black hover:scale-105 transition-all duration-200 ease hover:shadow-2xl">
+                      <img src={b} className="h-48 w-full object-cover rounded-t-lg" />
+                      <p className="text-center text-xl text-black py-2">PLANT B</p>
+                  </div>
+                  <div className="rounded-lg border-dashed border border-black hover:scale-105 transition-all duration-200 ease hover:shadow-2xl">
+                      <img src={c} className="h-48 w-full object-cover rounded-t-lg" />
+                      <p className="text-center text-xl text-black py-2">PLANT C</p>
+                  </div>
+                  <div className="rounded-lg border-dashed border border-black hover:scale-105 transition-all duration-200 ease hover:shadow-2xl">
+                      <img src={d} className="h-48 w-full object-cover rounded-t-lg" />
+                      <p className="text-center text-xl text-black py-2">PLANT D</p>
+                  </div>
+                  <div className="rounded-lg border-dashed border border-black hover:scale-105 transition-all duration-200 ease hover:shadow-2xl">
+                      <img src={a} className="h-48 w-full object-cover rounded-t-lg" />
+                      <p className="text-center text-xl text-black py-2">PLANT A</p>
+                  </div>
+
+                  <div className="rounded-lg border-dashed border border-black hover:scale-105 transition-all duration-200 ease hover:shadow-2xl">
+                      <img src={b} className="h-48 w-full object-cover rounded-t-lg" />
+                      <p className="text-center text-xl text-black py-2">PLANT B</p>
+                  </div>
+                  <div className="rounded-lg border-dashed border border-black hover:scale-105 transition-all duration-200 ease hover:shadow-2xl">
+                      <img src={c} className="h-48 w-full object-cover rounded-t-lg" />
+                      <p className="text-center text-xl text-black py-2">PLANT C</p>
+                  </div>
+                  <div className="rounded-lg border-dashed border border-black hover:scale-105 transition-all duration-200 ease hover:shadow-2xl">
+                      <img src={d} className="h-48 w-full object-cover rounded-t-lg" />
+                      <p className="text-center text-xl text-black py-2">PLANT D</p>
+                  </div>
+                  <div className="rounded-lg border-dashed border border-black hover:scale-105 transition-all duration-200 ease hover:shadow-2xl">
+                      <img src={a} className="h-48 w-full object-cover rounded-t-lg" />
+                      <p className="text-center text-xl text-black py-2">PLANT A</p>
+                  </div>
+
+                  <div className="rounded-lg border-dashed border border-black hover:scale-105 transition-all duration-200 ease hover:shadow-2xl">
+                      <img src={b} className="h-48 w-full object-cover rounded-t-lg" />
+                      <p className="text-center text-xl text-black py-2">PLANT B</p>
+                  </div>
+                  <div className="rounded-lg border-dashed border border-black hover:scale-105 transition-all duration-200 ease hover:shadow-2xl">
+                      <img src={c} className="h-48 w-full object-cover rounded-t-lg" />
+                      <p className="text-center text-xl text-black py-2">PLANT C</p>
+                  </div>
+                  <div className="rounded-lg border-dashed border border-black hover:scale-105 transition-all duration-200 ease hover:shadow-2xl">
+                      <img src={d} className="h-48 w-full object-cover rounded-t-lg" />
+                      <p className="text-center text-xl text-black py-2">PLANT D</p>
+                  </div>
                   </div>
               </>
     </div>

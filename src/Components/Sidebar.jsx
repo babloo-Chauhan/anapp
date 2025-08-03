@@ -51,7 +51,7 @@ export default function SideBar({ show }) {
                         <BiSolidUserCircle className='text-5xl' />
                     </div>
                     {/* Links Container */}
-                    <div className='m-2 h-[75%] w-4/6 overflow-hidden bg-gradient-to-r from-green-700 to-green-500 flex flex-col justify-center items-start transition-all duration-300 ease-in-out translate-x-0'>
+                    <div className='m-2 h-[75%] w-3/4 overflow-hidden bg-gradient-to-r from-green-700 to-green-500 flex flex-col justify-center items-start transition-all duration-300 ease-in-out translate-x-0'>
                         <div className='grid grid-cols-1 gap-4 p-4 '>
                             {links.map((text, index) => {
                                 const isActive = location.pathname === text.path;

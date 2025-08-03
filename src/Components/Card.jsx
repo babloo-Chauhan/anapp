@@ -8,15 +8,16 @@ import BrowserRouters from '../BrowserRouters';
 export default function Card() {
 
     const [slideRight, setSlideRight] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const HandleSlideRight = () =>{ setSlideRight(prev => !prev);
         setIsOpen(!isOpen);
     } //Toggle left/right slide
 
-    const [isOpen, setIsOpen] = useState(false);
+   
 
     const handleToggleLayout = () => {
-        setIsOpen(!isOpen);
+      // Toggle the state for the sidebar
         HandleSlideRight(); // Call the function passed from Card component to toggle sidebar
 
     };
@@ -28,6 +29,7 @@ export default function Card() {
 
         const handleTouchStartX = (e) => {
             touchstartX = e.touches[0].clientX; // Get the initial touch position
+         
             
         }
         const handleTouchMove = (e) => {
@@ -36,7 +38,10 @@ export default function Card() {
         }
         const handleTouchEnd = () => {
             if (touchstartX - touchendX > 50) {
-                setSlideRight(false); // Swipe left to show sidebar
+                // setSlideRight(false); // Swipe left to show sidebar
+                // HandleSlideRight(); // Call the function to toggle sidebar
+                handleToggleLayout(); // Call the function to toggle layout
+               
                 
             }
         }
