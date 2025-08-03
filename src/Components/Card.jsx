@@ -8,7 +8,7 @@ import BrowserRouters from '../BrowserRouters';
 export default function Card() {
 
     const [slideRight, setSlideRight] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     const HandleSlideRight = () =>{ setSlideRight(prev => !prev);
         setIsOpen(!isOpen);
@@ -16,50 +16,45 @@ export default function Card() {
 
    
 
-    const handleToggleLayout = () => {
-      // Toggle the state for the sidebar
-        HandleSlideRight(); // Call the function passed from Card component to toggle sidebar
+    // const handleToggleLayout = () => {
+    //   // Toggle the state for the sidebar
+    //     HandleSlideRight(); // Call the function passed from Card component to toggle sidebar
 
-    };
+    // };
 
     useEffect(() => {
+        if (!slideRight) return;
+
         let touchstartX = 0;
         let touchendX = 0;
-     
 
-        const handleTouchStartX = (e) => {
-            touchstartX = e.touches[0].clientX; // Get the initial touch position
-         
-            
-        }
+        const handleTouchStart = (e) => {
+            touchstartX = e.touches[0].clientX;
+        };
+
         const handleTouchMove = (e) => {
-            touchendX = e.touches[0].clientX; // Get the initial touch position
-            
-        }
+            touchendX = e.touches[0].clientX;
+        };
+
         const handleTouchEnd = () => {
             if (touchstartX - touchendX > 50) {
-                // setSlideRight(false); // Swipe left to show sidebar
-                // HandleSlideRight(); // Call the function to toggle sidebar
-                handleToggleLayout(); // Call the function to toggle layout
-               
-                
+                HandleSlideRight();
             }
-        }
+        };
 
         const container = document.getElementById('main-container');
+        if (!container) return;
 
-        container.addEventListener('touchstart', handleTouchStartX);
+        container.addEventListener('touchstart', handleTouchStart);
         container.addEventListener('touchmove', handleTouchMove);
         container.addEventListener('touchend', handleTouchEnd);
 
         return () => {
-            container.removeEventListener('touchstart', handleTouchStartX);
+            container.removeEventListener('touchstart', handleTouchStart);
             container.removeEventListener('touchmove', handleTouchMove);
             container.removeEventListener('touchend', handleTouchEnd);
-        }
-
-
-    }, [])
+        };
+    }, [slideRight]);
 
 
     return (
@@ -67,10 +62,10 @@ export default function Card() {
             <SideBar show={HandleSlideRight}  />
 
             {/*Whole Container card  without sidebar*/}
-            <div className={`relative h-screen w-full overflow-hidden ${slideRight ? 'slide-right' : 'slide-left'} transition-all duration-300 ease-in-out`} id="main-container">
+            <div className={`fixed h-dvh w-full overflow-y-auto ${slideRight ? 'slide-right' : 'slide-left'} transition-all duration-300 ease-in-out`} id="main-container">
 
                 {/*Navbar*/}
-                <Navbar  toggleLayout={handleToggleLayout}  i={isOpen} />
+                <Navbar  toggleLayout={HandleSlideRight}  i={isOpen} />
                 {/*Navbar*/}
 
 
