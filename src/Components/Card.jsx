@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import Navbar from '../Components/Navbar';
 import Bottomenu from '../Components/Bottomenu';
 import SideBar from './Sidebar';
@@ -9,22 +9,35 @@ export default function Card() {
 
     const [slideRight, setSlideRight] = useState(false);
 
-    const HandleSlideRight = () => setSlideRight(prev => !prev); //Toggle left/right slide
+    const HandleSlideRight = () =>{ setSlideRight(prev => !prev);
+        setIsOpen(!isOpen);
+    } //Toggle left/right slide
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleToggleLayout = () => {
+        setIsOpen(!isOpen);
+        HandleSlideRight(); // Call the function passed from Card component to toggle sidebar
+
+    };
 
     useEffect(() => {
         let touchstartX = 0;
         let touchendX = 0;
+     
 
         const handleTouchStartX = (e) => {
             touchstartX = e.touches[0].clientX; // Get the initial touch position
+            
         }
         const handleTouchMove = (e) => {
             touchendX = e.touches[0].clientX; // Get the initial touch position
+            
         }
         const handleTouchEnd = () => {
             if (touchstartX - touchendX > 50) {
                 setSlideRight(false); // Swipe left to show sidebar
+                
             }
         }
 
@@ -46,13 +59,13 @@ export default function Card() {
 
     return (
         <>
-            <SideBar show={slideRight} />
+            <SideBar show={HandleSlideRight}  />
 
-            {/*Whole Container*/}
-            <div className={`relative h-screen w-full overflow-hidden ${slideRight ? 'slide-right' : 'slide-left'} transition-all duration-300 ease-in-out`} id="main-container">
+            {/*Whole Container card  without sidebar*/}
+            <div className={`relative h-screen w-full overflow-hidden ${slideRight ? 'slide-right' : 'slide-left'} transition-all duration-300 ease-in-out border-red-800 border-2 shadow-xl/30`} id="main-container">
 
                 {/*Navbar*/}
-                <Navbar onLeftClick={HandleSlideRight} />
+                <Navbar  toggleLayout={handleToggleLayout}  i={isOpen} />
                 {/*Navbar*/}
 
 
