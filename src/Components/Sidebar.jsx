@@ -47,7 +47,7 @@ export default function SideBar({ show }) {
                     transition={{ duration: 0.3 }}
                     className='absolute left-0 top-0 h-screen w-full overflow-hidden bg-gradient-to-r from-green-700 to-green-500 flex-col justify-center items-center'
                 >
-                    <div className='h-[50px] w-[50px] rounded-full bg-gradient-to-r from-green-700 to-green-500 flex justify-center items-center mt-3 ml-2 cursor-pointer'>
+                    <div className='h-[50px] w-[50px] rounded-full bg-gradient-to-r from-green-700 to-green-500 flex justify-center items-center mt-7 ml-2 cursor-pointer'>
                         <BiSolidUserCircle className='text-5xl' />
                     </div>
                     {/* Links Container */}

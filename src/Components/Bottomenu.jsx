@@ -9,24 +9,22 @@ export default function Bottomenu() {
     const iconClass = 'h-[50px] w-[50px] rounded-full bg-white flex justify-center items-center';
 
     return (
-        <div className='fixed bottom-0 left-0 flex h-16 w-full items-center justify-between bg-white px-4 z-50'>
-
+        <div className="fixed bottom-0 left-0 flex h-16 w-full items-center justify-between bg-white px-4 z-50 shadow-lg border-t border-gray-200">
             <Link to="/" className={iconClass}>
-                <FaHome className='text-3xl' />
+                <FaHome className="text-3xl" />
             </Link>
 
             <Link to="/about" className={iconClass}>
-                <FcAbout className='text-3xl' />
+                <FcAbout className="text-3xl" />
             </Link>
 
             <Link to="/contact" className={iconClass}>
-                <MdContactPage className='text-3xl' />
+                <MdContactPage className="text-3xl" />
             </Link>
 
             <Link to="/account" className={iconClass}>
-                <BiSolidUserCircle className='text-3xl' />
+                <BiSolidUserCircle className="text-3xl" />
             </Link>
-
         </div>
     );
 }

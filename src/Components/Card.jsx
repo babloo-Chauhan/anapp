@@ -62,7 +62,7 @@ export default function Card() {
             <SideBar show={HandleSlideRight}  />
 
             {/*Whole Container card  without sidebar*/}
-            <div className={`relative h-screen w-full overflow-hidden ${slideRight ? 'slide-right' : 'slide-left'} transition-all duration-300 ease-in-out border-red-800 border-2 shadow-xl/30`} id="main-container">
+            <div className={`relative h-screen w-full overflow-hidden ${slideRight ? 'slide-right' : 'slide-left'} transition-all duration-300 ease-in-out`} id="main-container">
 
                 {/*Navbar*/}
                 <Navbar  toggleLayout={handleToggleLayout}  i={isOpen} />
@@ -77,7 +77,7 @@ export default function Card() {
 
 
                 {/*Bottom menu Bar*/}
-                <Bottomenu />
+                <Bottomenu  />
                 {/*Bottom menu Bar*/}
 
             </div>
